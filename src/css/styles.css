@@ -90,9 +90,9 @@
     pointer-events: auto;
     display: inline-flex;
     align-items: center;
-    gap: 24px;
+    gap: 18px;
     background: #ffffff;
-    padding: 10px 28px;
+    padding: 8px 22px;
     border-radius: 9999px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.05);
@@ -108,12 +108,12 @@
 .simple-nav a {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     color: #1a1c1c;
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
-    padding: 6px 12px;
+    font-size: 14px;
+    padding: 5px 10px;
     border-radius: 8px;
     transition: all 0.2s ease;
     white-space: nowrap;
@@ -125,7 +125,7 @@
 }
 
 .simple-nav .material-symbols-outlined {
-    font-size: 20px;
+    font-size: 18px;
     font-variation-settings: 'FILL' 0, 'wght' 500;
 }
 
