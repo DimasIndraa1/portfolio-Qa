@@ -751,29 +751,35 @@
                         <span class="text-primary font-label-sm tracking-widest uppercase">Document</span>
                         <h2 class="font-headline-lg text-headline-lg">Test Plan & UAT Documents.</h2>
                         <p class="text-tertiary text-body-md">Comprehensive test plan documentation and UAT sign-off documents for structured quality assurance.</p>
+                    </div>
+                    <div class="flex-1 flex flex-col items-center gap-6 w-full max-w-md">
+                        <div class="grid grid-cols-2 gap-4 w-full">
+                            <a href="https://qa-storage-4d960.firebaseapp.com/" target="_blank" rel="noopener noreferrer"
+                                class="bg-surface-container-low rounded-xl p-4 text-center block hover:bg-surface-container-high transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">description</span>
+                                <p class="text-sm font-bold mt-2">Test Plan</p>
+                            </a>
+                            <a href="https://qa-storage-4d960.firebaseapp.com/" target="_blank" rel="noopener noreferrer"
+                                class="bg-surface-container-low rounded-xl p-4 text-center block hover:bg-surface-container-high transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
+                                <p class="text-sm font-bold mt-2">UAT Document</p>
+                            </a>
+                            <a href="https://qa-storage-4d960.firebaseapp.com/" target="_blank" rel="noopener noreferrer"
+                                class="bg-surface-container-low rounded-xl p-4 text-center block hover:bg-surface-container-high transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">fact_check</span>
+                                <p class="text-sm font-bold mt-2">Test Cases</p>
+                            </a>
+                            <a href="https://qa-storage-4d960.firebaseapp.com/" target="_blank" rel="noopener noreferrer"
+                                class="bg-surface-container-low rounded-xl p-4 text-center block hover:bg-surface-container-high transition-colors">
+                                <span class="material-symbols-outlined text-primary text-3xl">assignment</span>
+                                <p class="text-sm font-bold mt-2">Test Reports</p>
+                            </a>
+                        </div>
                         <a href="https://qa-storage-4d960.firebaseapp.com/" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:saturate-150 transition-all shadow-lg shadow-blue-500/25">
                             <span class="material-symbols-outlined">open_in_new</span>
                             Open QA Dashboard
                         </a>
-                    </div>
-                    <div class="flex-1 grid grid-cols-2 gap-4 w-full max-w-md">
-                        <div class="bg-surface-container-low rounded-xl p-4 text-center">
-                            <span class="material-symbols-outlined text-primary text-3xl">description</span>
-                            <p class="text-sm font-bold mt-2">Test Plan</p>
-                        </div>
-                        <div class="bg-surface-container-low rounded-xl p-4 text-center">
-                            <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
-                            <p class="text-sm font-bold mt-2">UAT Document</p>
-                        </div>
-                        <div class="bg-surface-container-low rounded-xl p-4 text-center">
-                            <span class="material-symbols-outlined text-primary text-3xl">fact_check</span>
-                            <p class="text-sm font-bold mt-2">Test Cases</p>
-                        </div>
-                        <div class="bg-surface-container-low rounded-xl p-4 text-center">
-                            <span class="material-symbols-outlined text-primary text-3xl">assignment</span>
-                            <p class="text-sm font-bold mt-2">Test Reports</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -801,13 +807,19 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 w-full bg-white p-8 rounded-2xl shadow-xl">
-                    <form id="contact-form" class="space-y-6">
-                        <input type="hidden" name="access_key" value="783da944-fe8a-484f-923c-66f5508c3a81">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-on-surface uppercase tracking-wider">Full Name</label>
                             <input name="name"
                                 class="w-full bg-surface-container-low border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg p-4 transition-all"
                                 placeholder="John Doe" type="text" required />
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-on-surface uppercase tracking-wider">Email</label>
+                            <input name="email" type="email"
+                                class="w-full bg-surface-container-low border-transparent focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg p-4 transition-all"
+                                placeholder="you@example.com" required />
                         </div>
                         <div class="space-y-2">
                             <label class="text-sm font-bold text-on-surface uppercase tracking-wider">Your
@@ -878,6 +890,7 @@
         </div>
     </div>
 
+    <script src="src/js/config.js"></script>
     <script>
         (function() {
             var themeToggle = document.getElementById('theme-toggle');
@@ -923,6 +936,35 @@
                 html.classList.add('icons-ready');
                 hideLoader();
             }, 3000);
+        })();
+
+        (function() {
+            var form = document.getElementById('contact-form');
+            var toast = document.getElementById('toast');
+            if (form) {
+                var keyInput = document.createElement('input');
+                keyInput.type = 'hidden';
+                keyInput.name = 'access_key';
+                keyInput.value = window.WEB3FORMS_ACCESS_KEY || '';
+                form.appendChild(keyInput);
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var data = new FormData(form);
+                    fetch(form.action, { method: 'POST', body: data })
+                        .then(function(r) { return r.json(); })
+                        .then(function(res) {
+                            if (res.success) {
+                                toast.classList.add('show');
+                                form.reset();
+                                setTimeout(function() { toast.classList.remove('show'); }, 5000);
+                            }
+                        })
+                        .catch(function() {
+                            alert('Something went wrong. Please try again.');
+                        });
+                });
+            }
         })();
     </script>
 
