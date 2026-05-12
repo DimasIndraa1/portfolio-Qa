@@ -38,11 +38,14 @@ Portfolio website for a **Quality Assurance Manual Specialist**, highlighting ex
 ├── index.html               # Main landing page
 ├── projects.html            # All projects page
 ├── src/
+│   ├── components/          # Reusable UI components
 │   ├── css/
 │   │   └── styles.css       # Custom animations, dark mode, design tokens
 │   └── assets/
+│       ├── fonts/           # Local font files
+│       ├── icons/           # Standalone icon assets
 │       └── images/
-│           ├── icons/       # Tool & technology icons
+│           ├── icons/       # Tool & technology icon images
 │           ├── logos/       # Certification brand logos
 │           └── projects/    # Project screenshots
 └── README.md                # Documentation
