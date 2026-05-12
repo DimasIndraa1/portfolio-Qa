@@ -4,7 +4,7 @@ Portfolio website for a **Quality Assurance Manual Specialist**, highlighting ex
 
 ## Live Demo
 
-[View Live Portfolio](https://dimasindraa1.github.io/portfolio-Qa/)
+[View Live Portfolio](https://portfolio-dimas.my.id/)
 
 ---
 
