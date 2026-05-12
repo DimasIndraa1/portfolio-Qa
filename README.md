@@ -1,79 +1,70 @@
-# Agile QA Engineer Portfolio
+# QA Manual Portfolio — Dimas Nurindra
 
-A premium, high-performance portfolio website designed for an **Agile Quality Assurance Specialist**. This portfolio highlights expertise in manual testing, automation frameworks, and the iterative SDLC process, with a focus on fintech applications and CI/CD integration.
+Portfolio website for a **Quality Assurance Manual Specialist**, highlighting expertise in end-to-end manual testing, API testing, regression cycles, and fintech application validation.
 
-![Portfolio Preview](src/assets/images/preview.png) *(Note: Add your actual preview image path here)*
+## Live Demo
 
-## 🚀 Live Demo
-[View Live Portfolio](https://dimasindraa1.github.io/) *(Replace with your actual link)*
-
----
-
-## ✨ Features
-
-- **Modern & Responsive UI**: Built with a "Mobile-First" approach using Tailwind CSS for a seamless experience across all devices.
-- **Dynamic Tool Marquee**: A dual-row, high-performance marquee showing the technical stack (Jira, Postman, Appium, etc.) with hardware-accelerated smoothness.
-- **Interactive Sprint Dashboard**: A simulated "Live Status" terminal that shows sprint health, CI/CD stability, and real-time automation logs.
-- **Project Showcase**: Detailed cards for automation suites and DevOps integration projects.
-- **Agile Process Visualization**: A step-by-step breakdown of the iterative QA lifecycle.
-- **Professional Certifications**: A dedicated section for industry-standard credentials (ISTQB, Agile Certified).
-- **Functional Contact Form**: Integrated with Web3Forms for direct email delivery without a backend.
+[View Live Portfolio](https://dimasindraa1.github.io/portfolio-Qa/)
 
 ---
 
-## 🛠️ Built With
+## Features
 
-- **HTML5 & Semantic Tags**: For SEO and accessibility.
-- **Tailwind CSS**: Custom-configured design system with a premium color palette.
-- **Vanilla JavaScript**: Lightweight logic for navigation, mobile menus, and interactive UI elements.
-- **Google Fonts (Inter)**: For modern, readable typography.
-- **Material Symbols**: For consistent, high-quality iconography.
-- **Web3Forms**: For serverless form handling.
+- **Scroll Reveal Animations** — Sections and cards animate into view as you scroll using Intersection Observer
+- **Dark / Light Mode** — Theme toggle with `localStorage` persistence and system preference detection
+- **Responsive Design** — Mobile-first layout built with Tailwind CSS
+- **Tool Marquee** — Dual-row animated carousel showing testing tools and skills
+- **Agile QA Process** — Visual step-by-step breakdown of the iterative SDLC
+- **Project Showcase** — Work samples and project cards with live dashboard integration
+- **Certifications** — Verified credentials from MySkill and Digital Talent Scholarship
+- **Contact Form** — Serverless form handling via Formspree
 
 ---
 
-## 📂 Project Structure
+## Built With
+
+- **HTML5** — Semantic markup for SEO and accessibility
+- **Tailwind CSS** (CDN) — Custom design system with premium color palette
+- **Vanilla JavaScript** — Intersection Observer, theme toggle, form handling
+- **Google Fonts (Inter)** — Modern, readable typography
+- **Material Symbols** — Consistent iconography
+- **Formspree** — Serverless form submission
+
+---
+
+## Project Structure
 
 ```text
-├── index.html          # Main entry point
+├── index.html               # Main landing page
+├── projects.html            # All projects page
 ├── src/
 │   ├── css/
-│   │   └── styles.css  # Custom animations and design tokens
-│   ├── js/
-│   │   └── main.js    # Interactive logic and form handling
+│   │   └── styles.css       # Custom animations, dark mode, design tokens
 │   └── assets/
-│       ├── images/     # Icons, project screenshots, and brand assets
-│       └── fonts/      # Local font files (if applicable)
-└── README.md           # Documentation
+│       └── images/
+│           ├── icons/       # Tool & technology icons
+│           ├── logos/       # Certification brand logos
+│           └── projects/    # Project screenshots
+└── README.md                # Documentation
 ```
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup
 
-1. **Clone the repository**:
+1. **Clone the repo**:
    ```bash
-   git clone https://github.com/DimasIndraa1/portfolio-qa.git
+   git clone https://github.com/DimasIndraa1/portfolio-Qa.git
    ```
 
-2. **Open the project**:
-   Simply open `index.html` in your favorite browser. No build steps are required as it uses Tailwind CSS via CDN for rapid iteration.
+2. **Open locally**:
+   Open `index.html` in any browser. No build step required.
 
-3. **Customize the Contact Form**:
-   Replace the `access_key` in the `contact-form` section of `index.html` with your own key from [Web3Forms](https://web3forms.com/).
-
----
-
-## 🤝 Contribution
-
-Feel free to fork this repository if you find it useful for your own portfolio! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+3. **Customize contact form**:
+   Replace the Formspree endpoint in `index.html` with your own form ID.
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Designed with by **AI**
+MIT
