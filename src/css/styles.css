@@ -60,6 +60,19 @@
     animation-play-state: paused;
 }
 
+.skill-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: #2563eb;
+}
+.dark .skill-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    border-color: #60a5fa;
+}
+
 @keyframes marquee-left {
     0% {
         transform: translateX(0%);
@@ -558,6 +571,14 @@ header nav a {
     background-color: #2563eb;
 }
 
+.dark .project-btn-action {
+    background-color: #1d4ed8;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark .project-btn-action:hover {
+    background-color: #2563eb;
+}
+
 .dark .text-primary {
     color: #90b0ff;
 }
@@ -795,6 +816,187 @@ header nav a {
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 .reveal-delay-6 { transition-delay: 0.6s; }
+
+/* VS Code Editor Mockup */
+.vscode-window {
+    background: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 100%;
+    max-width: 740px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Card variant — fills container, no outer chrome */
+.vscode-card.vscode-window {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+.vscode-card .vscode-editor {
+    flex: 1;
+}
+
+.vscode-titlebar {
+    background: #323233;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+    position: relative;
+}
+
+.vscode-dots {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.vscode-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: opacity 0.2s;
+}
+
+.vscode-dot-close { background: #ff5f56; }
+.vscode-dot-minimize { background: #ffbd2e; }
+.vscode-dot-maximize { background: #27c93f; }
+
+.vscode-filename {
+    color: #cccccc;
+    font-size: 13px;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.vscode-editor {
+    display: flex;
+    font-family: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.9;
+    padding: 14px 0 18px;
+    background: #1e1e1e;
+}
+
+.vscode-gutter {
+    color: #858585;
+    padding: 0 14px 0 18px;
+    text-align: right;
+    user-select: none;
+    min-width: 28px;
+    flex-shrink: 0;
+}
+
+.vscode-gutter-line {
+    line-height: 1.9;
+    font-size: 13px;
+}
+
+.vscode-code {
+    flex: 1;
+    color: #d4d4d4;
+    white-space: pre;
+    overflow-x: auto;
+    padding-right: 18px;
+    position: relative;
+    min-height: 20px;
+}
+
+.vscode-code-line {
+    line-height: 1.9;
+    font-size: 13px;
+    white-space: pre;
+    min-height: 1.9em;
+}
+
+/* VS Code Dark+ theme syntax highlighting */
+.vscode-kw { color: #569cd6; }    /* keywords: import, const, from, async, await */
+.vscode-str { color: #ce9178; }    /* strings */
+.vscode-num { color: #b5cea8; }    /* numbers */
+.vscode-cm { color: #6a9955; }    /* comments */
+.vscode-fn { color: #dcdcaa; }    /* functions/methods */
+.vscode-var { color: #9cdcfe; }   /* variables/properties */
+.vscope-op { color: #d4d4d4; }    /* operators */
+.vscode-pu { color: #d4d4d4; }    /* punctuation */
+.vscode-bg { color: #4ec9b0; }    /* built-in */
+.vscode-tag { color: #569cd6; }   /* template literal tags */
+.vscode-method { color: #dcdcaa; }
+.vscode-prop { color: #9cdcfe; }
+
+/* Blinking cursor */
+.vscode-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.1em;
+    background: #569cd6;
+    animation: vscode-blink 1s step-end infinite;
+    vertical-align: text-bottom;
+    margin-left: 1px;
+}
+
+@keyframes vscode-blink {
+    50% { opacity: 0; }
+}
+
+/* VS Code status bar */
+.vscode-statusbar {
+    background: #007acc;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: #ffffff;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+}
+
+.vscode-status-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.vscode-status-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .vscode-window {
+        border-radius: 8px;
+        max-width: 100%;
+    }
+    .vscode-editor {
+        font-size: 11px;
+        line-height: 1.7;
+        padding: 10px 0 14px;
+    }
+    .vscode-filename {
+        font-size: 11px;
+    }
+    .vscode-gutter {
+        padding: 0 8px 0 12px;
+        min-width: 20px;
+    }
+    .vscode-gutter-line,
+    .vscode-code-line {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+}
 
 /* Smooth scroll behavior */
 html {
