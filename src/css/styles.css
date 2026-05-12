@@ -1007,3 +1007,7 @@ header nav a {
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    overflow-x: hidden;
+}
