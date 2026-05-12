@@ -65,9 +65,3 @@ Portfolio website for a **Quality Assurance Manual Specialist**, highlighting ex
 
 3. **Customize contact form**:
    Replace the Formspree endpoint in `index.html` with your own form ID.
-
----
-
-## License
-
-MIT
