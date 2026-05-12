@@ -146,7 +146,7 @@
 
     <main>
         <section class="py-16 md:py-[120px] px-6 md:px-8 max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div class="max-w-2xl">
                     <span class="text-primary font-label-sm tracking-widest uppercase">Projects</span>
                     <h1 class="font-headline-lg text-headline-lg mt-2">Work Sample and Project.</h1>
@@ -158,7 +158,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card: Enterprise QA Portal -->
-                <div class="group">
+                <div class="reveal reveal-delay-1 group">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
                         <img class="w-full h-full object-cover object-top" alt="Enterprise QA Portal" src="src/assets/images/qa-portal.png" />
                         <div class="absolute top-4 right-4">
@@ -179,7 +179,7 @@
                 </div>
 
                 <!-- Card: API Automation CI/CD -->
-                <div class="group">
+                <div class="reveal reveal-delay-2 group">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
                         <img class="w-full h-full object-cover" alt="API Automation" src="src/assets/images/api.png" />
                         <div class="absolute top-4 right-4">
@@ -200,7 +200,7 @@
                 </div>
 
                 <!-- Card: Live Testing Dashboard -->
-                <div class="group">
+                <div class="reveal reveal-delay-3 group">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
                         <img class="w-full h-full object-cover" alt="Dashboard" src="src/assets/images/Dashboard.png" />
                         <div class="absolute top-4 right-4">
@@ -221,7 +221,7 @@
                 </div>
 
                 <!-- Card: Appium / Mobile -->
-                <div class="group">
+                <div class="reveal reveal-delay-4 group">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
                         <div class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                             <span class="text-slate-400 text-6xl">📱</span>
@@ -244,7 +244,7 @@
                 </div>
 
                 <!-- Card: Newman / Postman -->
-                <div class="group">
+                <div class="reveal reveal-delay-5 group">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
                         <div class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                             <span class="text-slate-400 text-6xl">⚙️</span>
@@ -267,7 +267,7 @@
                 </div>
 
                 <!-- Card: UX Testing & Reports -->
-                <div class="group">
+                <div class="reveal reveal-delay-6 group">
                     <div class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
                         <div class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                             <span class="text-slate-400 text-6xl">🔍</span>
@@ -351,6 +351,34 @@
                 html.classList.add('icons-ready');
                 hideLoader();
             }, 3000);
+        })();
+    </script>
+
+    <script>
+        (function() {
+            var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+            if ('IntersectionObserver' in window && revealElements.length > 0) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                revealElements.forEach(function(el) {
+                    observer.observe(el);
+                });
+            } else {
+                revealElements.forEach(function(el) {
+                    el.classList.add('active');
+                });
+            }
         })();
     </script>
 
