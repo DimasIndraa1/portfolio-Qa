@@ -148,7 +148,7 @@
 
     <main>
         <section class="py-10 md:py-[120px] px-6 md:px-8 max-w-7xl mx-auto">
-            <div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
+                <div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-12 gap-6">
                 <div class="max-w-2xl">
                     <span class="text-primary font-label-sm tracking-widest uppercase">Projects</span>
                     <h1 class="text-[28px] md:text-[34px] font-bold mt-2">Work Sample and Project.</h1>
@@ -160,21 +160,25 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card: API Automation CI/CD (now first) -->
-                <div class="reveal reveal-delay-1 group">
+                <!-- Card: API Automation CI/CD -->
+                <div data-category="automation" class="reveal reveal-delay-1 group flex flex-col h-full">
                     <div
-                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <img class="w-full h-full object-cover" alt="Allure Report - Authentication API"
                             src="src/assets/images/projects/allure-report.png" />
+                        <div class="absolute top-4 right-4">
+                            <span
+                                class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full">Automation</span>
+                        </div>
                     </div>
-                    <div class="space-y-3">
+                    <div class="flex flex-col gap-3 flex-1">
                         <div class="flex gap-2"><span
                                 class="text-[11px] font-bold text-primary uppercase tracking-widest">API
                                 Automation</span></div>
                         <h3 class="text-xl font-bold">API Automation Testing - Authentication</h3>
-                        <p class="text-tertiary text-sm">Auth API Automation (positive & negative cases) via GitHub
+                        <p class="text-tertiary text-sm flex-1">Auth API Automation (positive & negative cases) via GitHub
                             Actions CI/CD + Allure reports.</p>
-                        <div class="flex gap-3 pt-2">
+                        <div class="flex gap-3 pt-2 mt-auto">
                             <a href="https://github.com/DimasIndraa1/authentication-api-automation" target="_blank"
                                 rel="noopener noreferrer"
                                  class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg inline-block transition duration-200 hover:brightness-110 active:scale-95 project-btn-action">Source</a>
@@ -186,38 +190,71 @@
                     </div>
                 </div>
 
-                <!-- Card: Enterprise QA Portal -->
-                <div class="reveal reveal-delay-2 group">
+                <!-- Card: Jira Project Management Work Sample -->
+                <div data-category="worksample" class="reveal reveal-delay-2 group flex flex-col h-full">
                     <div
-                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
-                        <img class="w-full h-full object-cover object-top" alt="Enterprise QA Portal"
-                            src="src/assets/images/projects/qa-portal.png" />
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
+                        <img class="w-full h-full object-cover object-top" alt="Jira Project Management"
+                            src="src/assets/images/projects/work-sample-jira.png" />
                         <div class="absolute top-4 right-4">
                             <span
-                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-bold rounded-full">On
-                                Progress</span>
+                                class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Work
+                                Sample</span>
                         </div>
                     </div>
-                    <div class="space-y-3">
+                    <div class="flex flex-col gap-3 flex-1">
                         <div class="flex gap-2"><span
-                                class="text-[11px] font-bold text-primary uppercase tracking-widest">Web
-                                Application</span></div>
-                        <h3 class="text-xl font-bold">Enterprise QA Portal</h3>
-                        <p class="text-tertiary text-sm">A comprehensive QA tracking dashboard for real-time bug
-                            tracking, test case management, and test metrics visualization.</p>
-                        <div class="flex gap-3 pt-2">
-                            <button disabled
-                                class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg opacity-50 cursor-not-allowed">
-                                Coming Soon
-                            </button>
+                                class="text-[11px] font-bold text-primary uppercase tracking-widest">Jira / Project
+                                Management</span></div>
+                        <h3 class="text-xl font-bold">Jira Project Management</h3>
+                        <p class="text-tertiary text-sm flex-1">Jira work sample covering sprint planning, backlog grooming, and
+                            QA workflow coordination.
+                        </p>
+                        <div class="flex gap-3 pt-2 mt-auto">
+                            <a href="https://drive.google.com/drive/folders/1stbMQQmkWIZwuzhDe4TLIxh1sw6-cB0Y?usp=drive_link"
+                                target="_blank" rel="noopener noreferrer"
+                                class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg inline-block transition duration-200 hover:brightness-110 active:scale-95 project-btn-action">View
+                                Work Sample</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: Plane Project Management Work Sample -->
+                <div data-category="worksample" class="reveal reveal-delay-3 group flex flex-col h-full">
+                    <div
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
+                        <img class="w-full h-full object-cover object-top" alt="Plane Project Management"
+                            src="src/assets/images/projects/work-sample-plane.png" />
+                        <div class="absolute top-4 right-4">
+                            <span
+                                class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Work
+                                Sample</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 flex-1">
+                        <div class="flex gap-2"><span
+                                class="text-[11px] font-bold text-primary uppercase tracking-widest">Project
+                                Management</span></div>
+                        <h3 class="text-xl font-bold">Plane Project Management</h3>
+                        <p class="text-tertiary text-sm flex-1">Project management work sample using Plane — issue tracking,
+                            sprint planning, and QA workflow coordination.</p>
+                        <div class="flex gap-3 pt-2 mt-auto">
+                            <a href="https://drive.google.com/drive/folders/1Ptog5yEvjK_MGbTfq0_6vk2Bzl7lM5XR?usp=drive_link"
+                                target="_blank" rel="noopener noreferrer"
+                                class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg inline-block transition duration-200 hover:brightness-110 active:scale-95 project-btn-action">View
+                                Work Sample</a>
+                            <a href="https://sites.plane.so/issues/8801c8ed7dec4a0b97230af7974918f5"
+                                target="_blank" rel="noopener noreferrer"
+                                class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg inline-block transition duration-200 hover:brightness-110 active:scale-95 project-btn-action">Open
+                                Plane</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card: Live Testing Dashboard -->
-                <div class="reveal reveal-delay-3 group">
+                <div data-category="dashboard" class="reveal reveal-delay-4 group flex flex-col h-full">
                     <div
-                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <img class="w-full h-full object-cover" alt="Dashboard"
                             src="src/assets/images/projects/Dashboard.png" />
                         <div class="absolute top-4 right-4">
@@ -226,13 +263,13 @@
                                 Progress</span>
                         </div>
                     </div>
-                    <div class="space-y-3">
+                    <div class="flex flex-col gap-3 flex-1">
                         <div class="flex gap-2"><span
                                 class="text-[11px] font-bold text-primary uppercase tracking-widest">Live Tool</span>
                         </div>
                         <h3 class="text-xl font-bold">Live Testing Dashboard</h3>
-                        <p class="text-tertiary text-sm">Hosted dashboard with live test metrics and reports.</p>
-                        <div class="flex gap-3 pt-2">
+                        <p class="text-tertiary text-sm flex-1">Hosted dashboard with live test metrics and reports.</p>
+                        <div class="flex gap-3 pt-2 mt-auto">
                             <button disabled
                                 class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg opacity-50 cursor-not-allowed">
                                 Coming Soon
@@ -242,9 +279,9 @@
                 </div>
 
                 <!-- Card: Appium / Mobile -->
-                <div class="reveal reveal-delay-4 group">
+                <div data-category="mobile" class="reveal reveal-delay-5 group flex flex-col h-full">
                     <div
-                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <div
                             class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                             <span class="text-slate-400 text-6xl">📱</span>
@@ -255,13 +292,13 @@
                                 Progress</span>
                         </div>
                     </div>
-                    <div class="space-y-3">
+                    <div class="flex flex-col gap-3 flex-1">
                         <div class="flex gap-2"><span
                                 class="text-[11px] font-bold text-primary uppercase tracking-widest">Mobile /
                                 Automation</span></div>
                         <h3 class="text-xl font-bold">Appium / Mobile</h3>
-                        <p class="text-tertiary text-sm">Basic Appium proof-of-concept for mobile test flows.</p>
-                        <div class="flex gap-3 pt-2">
+                        <p class="text-tertiary text-sm flex-1">Basic Appium proof-of-concept for mobile test flows.</p>
+                        <div class="flex gap-3 pt-2 mt-auto">
                             <button disabled
                                 class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg opacity-50 cursor-not-allowed">
                                 Coming Soon
@@ -271,9 +308,9 @@
                 </div>
 
                 <!-- Card: Newman / Postman -->
-                <div class="reveal reveal-delay-5 group">
+                <div data-category="automation" class="reveal reveal-delay-6 group flex flex-col h-full">
                     <div
-                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <div
                             class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                             <span class="text-slate-400 text-6xl">⚙️</span>
@@ -284,13 +321,13 @@
                                 Progress</span>
                         </div>
                     </div>
-                    <div class="space-y-3">
+                    <div class="flex flex-col gap-3 flex-1">
                         <div class="flex gap-2"><span
                                 class="text-[11px] font-bold text-primary uppercase tracking-widest">Automation</span>
                         </div>
                         <h3 class="text-xl font-bold">Newman / Postman</h3>
-                        <p class="text-tertiary text-sm">Request collections and CI integration examples.</p>
-                        <div class="flex gap-3 pt-2">
+                        <p class="text-tertiary text-sm flex-1">Request collections and CI integration examples.</p>
+                        <div class="flex gap-3 pt-2 mt-auto">
                             <button disabled
                                 class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg opacity-50 cursor-not-allowed">
                                 Coming Soon
@@ -300,9 +337,9 @@
                 </div>
 
                 <!-- Card: UX Testing & Reports -->
-                <div class="reveal reveal-delay-6 group">
+                <div data-category="worksample" class="reveal reveal-delay-7 group flex flex-col h-full">
                     <div
-                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm">
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <div
                             class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                             <span class="text-slate-400 text-6xl">🔍</span>
@@ -313,12 +350,12 @@
                                 Progress</span>
                         </div>
                     </div>
-                    <div class="space-y-3">
+                    <div class="flex flex-col gap-3 flex-1">
                         <div class="flex gap-2"><span
                                 class="text-[11px] font-bold text-primary uppercase tracking-widest">Misc</span></div>
                         <h3 class="text-xl font-bold">UX Testing & Reports</h3>
-                        <p class="text-tertiary text-sm">Sample UX audit screenshots and findings.</p>
-                        <div class="flex gap-3 pt-2">
+                        <p class="text-tertiary text-sm flex-1">Sample UX audit screenshots and findings.</p>
+                        <div class="flex gap-3 pt-2 mt-auto">
                             <button disabled
                                 class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg opacity-50 cursor-not-allowed">
                                 Coming Soon
