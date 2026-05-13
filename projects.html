@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth overflow-x-hidden" lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -121,7 +121,14 @@
 
 <body class="bg-surface text-on-surface font-body-md antialiased">
     <div id="loader">
-        <div class="loader-spinner"></div>
+        <div class="typing-indicator">
+            <div class="typing-circle"></div>
+            <div class="typing-circle"></div>
+            <div class="typing-circle"></div>
+            <div class="typing-shadow"></div>
+            <div class="typing-shadow"></div>
+            <div class="typing-shadow"></div>
+        </div>
     </div>
 
     <!-- Simple centered pill navbar -->
@@ -251,8 +258,36 @@
                     </div>
                 </div>
 
+                <!-- Card: Trello Project Management Work Sample -->
+                <div data-category="worksample" class="reveal reveal-delay-4 group flex flex-col h-full">
+                    <div
+                        class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
+                        <img class="w-full h-full object-cover object-top" alt="Trello Project Management"
+                            src="src/assets/images/projects/work-sample-trello.png" />
+                        <div class="absolute top-4 right-4">
+                            <span
+                                class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">Work
+                                Sample</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 flex-1">
+                        <div class="flex gap-2"><span
+                                class="text-[11px] font-bold text-primary uppercase tracking-widest">Project
+                                Management</span></div>
+                        <h3 class="text-xl font-bold">Trello Project Management</h3>
+                        <p class="text-tertiary text-sm flex-1">Project management work sample using Trello — board
+                            setup, sprint tracking, and QA workflow coordination.</p>
+                        <div class="flex gap-3 pt-2 mt-auto">
+                            <a href="https://drive.google.com/drive/folders/1pB9-hSUEx_KIfy3c9U6ZwcXehj80YzpS?usp=drive_link"
+                                target="_blank" rel="noopener noreferrer"
+                                class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg inline-block transition duration-200 hover:brightness-110 active:scale-95 project-btn-action">View
+                                Work Sample</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Card: Live Testing Dashboard -->
-                <div data-category="dashboard" class="reveal reveal-delay-4 group flex flex-col h-full">
+                <div data-category="dashboard" class="reveal reveal-delay-5 group flex flex-col h-full">
                     <div
                         class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <img class="w-full h-full object-cover" alt="Dashboard"
@@ -279,7 +314,7 @@
                 </div>
 
                 <!-- Card: Appium / Mobile -->
-                <div data-category="mobile" class="reveal reveal-delay-5 group flex flex-col h-full">
+                <div data-category="mobile" class="reveal reveal-delay-6 group flex flex-col h-full">
                     <div
                         class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <div
@@ -308,7 +343,7 @@
                 </div>
 
                 <!-- Card: Newman / Postman -->
-                <div data-category="automation" class="reveal reveal-delay-6 group flex flex-col h-full">
+                <div data-category="automation" class="reveal reveal-delay-7 group flex flex-col h-full">
                     <div
                         class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <div
@@ -337,7 +372,7 @@
                 </div>
 
                 <!-- Card: UX Testing & Reports -->
-                <div data-category="worksample" class="reveal reveal-delay-7 group flex flex-col h-full">
+                <div data-category="worksample" class="reveal reveal-delay-8 group flex flex-col h-full">
                     <div
                         class="relative rounded-2xl overflow-hidden aspect-[4/3] mb-4 bg-surface-container border border-surface-container-high shadow-sm shrink-0">
                         <div
@@ -367,7 +402,7 @@
         </section>
     </main>
 
-    <footer class="w-full border-t border-gray-100 pt-12 md:pt-20 pb-10 mt-16 md:mt-[120px] bg-white">
+    <footer class="w-full border-t border-gray-100 pt-8 md:pt-12 pb-8 mt-10 md:mt-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="space-y-2 text-center md:text-left">
                 <p class="text-lg font-bold text-gray-900">Quality Assurance</p>
@@ -379,8 +414,6 @@
                     href="https://www.linkedin.com/in/dimas-nurindra-qa/" target="_blank">LinkedIn</a>
                 <a class="text-gray-500 hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 text-sm"
                     href="https://github.com/DimasIndraa1" target="_blank">GitHub</a>
-                <a class="text-gray-500 hover:text-primary transition-colors hover:underline decoration-primary underline-offset-4 text-sm"
-                    href="index.html#contact">Email</a>
             </div>
         </div>
     </footer>
